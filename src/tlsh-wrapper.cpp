@@ -1,4 +1,5 @@
 #include "tlsh-wrapper.h"
+#include "tlsh.h"
 
 extern "C" Tlsh* Tlsh_new()
 {
@@ -23,6 +24,11 @@ extern "C" void Tlsh_update(Tlsh* tlsh, const unsigned char* data, unsigned int 
 extern "C" void Tlsh_final(Tlsh* tlsh, const unsigned char* data, unsigned int len, int fc_cons_option)
 {
         tlsh->final(data, len, fc_cons_option);
+}
+
+extern "C" int Tlsh_from_str(Tlsh* tlsh, const char* str)
+{
+        tlsh->fromTlshStr(str);
 }
 
 extern "C" int Tlsh_total_diff(Tlsh* tlsh, const Tlsh *other, int len_diff)
