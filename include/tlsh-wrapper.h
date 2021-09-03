@@ -18,6 +18,7 @@ extern "C" {
     void Tlsh_final(Tlsh* tlsh, const unsigned char* data, unsigned int len, int fc_cons_option);
     int Tlsh_from_str(Tlsh* tlsh, const char* str);
     int Tlsh_total_diff(Tlsh* tlsh, const Tlsh *other, int len_diff);
+    void Tlsh_reset(Tlsh* tlsh);
     void Tlsh_delete(Tlsh* tlsh);
 
 #ifdef __cplusplus

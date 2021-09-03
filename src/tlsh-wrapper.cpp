@@ -36,6 +36,11 @@ extern "C" int Tlsh_total_diff(Tlsh* tlsh, const Tlsh *other, int len_diff)
         return tlsh->totalDiff(other, len_diff);
 }
 
+extern "C" void Tlsh_reset(Tlsh* tlsh)
+{
+        tlsh->reset();
+}
+
 extern "C" void Tlsh_delete(Tlsh* tlsh)
 {
         delete tlsh;
